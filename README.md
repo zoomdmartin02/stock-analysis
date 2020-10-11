@@ -62,3 +62,4 @@ With the refactored code, we seem to have brought our processing time down signi
 I can only think of one reason why a developer would not be interested in learning ways to improve his/her code.  Refactoring simply looks at possible improvements.  In our case above, we have shown that signifcant improvement to the user experience and resoure utilization can be achieved by refactoring code instead of always going back to original development efforts.
 ---
 The original vs refactored code in this case showed significant improvement by just minimizing writes to the worksheet at the end and leveraging variable indexes, allowing all processing to stay in memory as opposed to writing each time it cycled through the outer loop.  Any client or customer would very likely greatly prefer the refactored over the original code, especially as data sets being processed increase.
+---
