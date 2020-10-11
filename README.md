@@ -14,7 +14,7 @@ The original and refactored code versions of this Excel worksheet produce the ex
 ---
 ### Technology Involved
 ---
-The technology involved is VBA code, the macro language for Microsoft Office.  In this workbook, there are no non-programmatic activities.  All processing and programmatic execution is occurring within VBA modules that are accessed thorugh the Developer ribbon within the application.
+The technology involved is VBA code, the macro language for Microsoft Office.  In this workbook, there are no formulas or functions established in the worksheet itself.  All processing and programmatic execution is occurring within VBA modules that are accessed thorugh the Developer ribbon within the application.  Formatting, formulas and functions are called from the code and applied to cells or ranges from the VBA code.
 ---
 #### Original Code
 ---
