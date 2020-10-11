@@ -34,7 +34,7 @@ The second version of this VBA code takes a different strategy with processing t
 ---
 ![Figure-4](Resources/refactored_loops.png)
 ---
-![Figure-5](Resources/refactored_looping _multiple_arrays.png)
+![Figure-5](Resources/refactored_looping%20_multiple_arrays.png)
 ---
 ## Results
 ---
