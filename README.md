@@ -1,6 +1,5 @@
 # Stock-analysis Excel Application and Code Refactoring Analysis
----
-The Deliverable Fulfills "Emerging" Required Criteria AND has the following: ✓There is a detailed summary of the pros and cons of refactoring code. ✓There is a detailed summary of the pros and cons of the original and refactored VBA script.
+---✓There is a detailed summary of the pros and cons of refactoring code. ✓There is a detailed summary of the pros and cons of the original and refactored VBA script.
 
 
 ## Project Overview
@@ -17,14 +16,15 @@ The original and refactored code versions of this Excel worksheet produce the ex
 ---
 ### Technology Involved
 ---
-The technology involved if VBA code, the macro language for Microsoft Office.  In this workbook, there are no non-programmatic activities.  All processing and programmatic execution is occurring within VBA modules that are accessed thorugh the Developer ribbon within the application.
+The technology involved is VBA code, the macro language for Microsoft Office.  In this workbook, there are no non-programmatic activities.  All processing and programmatic execution is occurring within VBA modules that are accessed thorugh the Developer ribbon within the application.
 ---
 #### Original Code
 ---
-The original VBA code relies on nested For Loops and conditional compound If Then and Else statements.  The outer loop cycles through a single array of 12 ticker symbols.  ?The conditional statements are utilized to establish a comparison between the ticker symbol in the data set and the current ticker in the variable array.  If the ticker symbol is the same, in an additive manner an update to variables occur as the program loops through from the inner loop each line of data in the data worksheet.  As it progresses through the data set a conditional statement determines whether the stock ticker changes.  If so, the values of the variables and calculations that determine return, starting and ending prices are writen to the analysis worksheet, and then processing returns to the code to progresses to the next ticker.  This process continues through the entire data set pausing each time to write summary data to the Excel worksheet after reading the last line item associated with the current stock ticker. Following is a screen shot of the key code snippets:
+The original VBA code relies on nested For Loops and conditional compound If Then and Else statements.  The outer loop cycles through a single array of 12 ticker symbols.  The conditional statements are utilized to establish a comparison between the ticker symbol in the data set and the current ticker in the variable array.  If the ticker symbol is the same, in an additive manner an update to variables occur as the inner loop code evaluates each line of data in the data worksheet.  As it progresses through the data set a conditional statement determines whether the stock ticker changes.  If so, the values of the variables and calculations that determine return, starting and ending prices are writen to the analysis worksheet, and then processing returns to progress to the next ticker.  This process continues through the entire data set pausing each time to write summary data to the Excel worksheet after reading the last line item associated with the current stock ticker. Following is a screen shot of the key code snippets:
 ---
-
+![Figure-1 ](Resources/Original_Array.png)
 ---
+![Figure-2](Resources/original_loop.png)
 #### Refactored Code
 ---
 The second version of this VBA code takes a different strategy with processing the data set.  It has all of the same techniques for collecting user input to select the appropriate data set and sheet formatting, but instead of collecting results into a single set of variables that are populated and written to the sheet with each subset of ticker symbols, this code creates variable arrays and an index variable array so that instead writing data to the sheet multiple times, data is written to the arrays in memory and only one write to the excel spreadsheet after the entire data set is processed and all elements of the arrays are populated and calculated.
