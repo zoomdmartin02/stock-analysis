@@ -48,5 +48,14 @@ Here are the screenshots that show the amount of time it took to run each of the
 2017 ![Figure-6](Resources/green_stocks_analysis_2017.png)
 ---
 2018 ![Figure-7](Resources/green_stocks_analysis_2018.png)
+---
+Nearly 12.5 seconds to run the original code.  In total there are about 3000 lines of data in these subsets.  These data sets are also very small in comparison to an entire stock index's data such as the DOW Jones.  With 12 tickers, we took nearly 1 second per ticker to process.  Think about what this would look like if there were hundreds or thousands of stock tickers to be processed.
+---
+Here are the screenshots that show the amount of time it took to run each of the two data sets with the refactored code:
+---
+2017 ![Figure-6](Resources/VBA_Challenge_2017.png)
+---
+2018 ![Figure-7](Resources/VBA_Challenge_2018.png)
+---
 
 ## Summary
