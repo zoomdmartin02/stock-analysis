@@ -25,9 +25,16 @@ The original VBA code relies on nested For Loops and conditional compound If The
 ![Figure-1 ](Resources/Original_Array.png)
 ---
 ![Figure-2](Resources/original_loop.png)
+---
 #### Refactored Code
 ---
-The second version of this VBA code takes a different strategy with processing the data set.  It has all of the same techniques for collecting user input to select the appropriate data set and sheet formatting, but instead of collecting results into a single set of variables that are populated and written to the sheet with each subset of ticker symbols, this code creates variable arrays and an index variable array so that instead writing data to the sheet multiple times, data is written to the arrays in memory and only one write to the excel spreadsheet after the entire data set is processed and all elements of the arrays are populated and calculated.
+The second version of this VBA code takes a different strategy with processing the data set.  It has all of the same techniques for collecting user input to select the appropriate data set and sheet formatting, but instead of collecting results into a single set of variables that are populated and written to the sheet each revolution of the loop, this code creates 3 variable arrays and an index variable array so that instead writing data to the sheet multiple times, data is written to the arrays in memory and only one write to the excel spreadsheet after the entire data set is processed and all elements of the arrays are populated and calculated.  The following code snipets demonstrate this change in strategy:
+---
+![Figure-3](Resources/refactored_multiple_arrays.png)
+---
+![Figure-4](Resources/refactored_loops.png)
+---
+![Figure-5](Resources/refactored_looping _multiple_arrays.png)
 ---
 ## Results
 ---
