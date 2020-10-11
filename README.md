@@ -1,6 +1,6 @@
 # Stock-analysis Excel Application and Code Refactoring Analysis
 ---
-The purpose and background are well defined. ✓The analysis is well described with screenshots and code.The Deliverable Fulfills "Emerging" Required Criteria AND has the following: ✓There is a detailed summary of the pros and cons of refactoring code. ✓There is a detailed summary of the pros and cons of the original and refactored VBA script.
+The Deliverable Fulfills "Emerging" Required Criteria AND has the following: ✓There is a detailed summary of the pros and cons of refactoring code. ✓There is a detailed summary of the pros and cons of the original and refactored VBA script.
 
 
 ## Project Overview
@@ -9,17 +9,21 @@ This project takes two versions of an Excel Stock Analysis workbook and compares
 ---
 ### Purpose
 ---
-In working with data sets, size matters.  Code utilized to process data sets has to be efficient to create the most utility for the end-user so that time is not wasted in waiting for results to be presented, or that computing resources are not over-leveraged, creating stability issues in the compute environment.  This project looks at two versions of VBA code, an original version and a refactored version to see if there are any code techniques that produces a more efficient experience.
+In working with data sets, size matters.  Code utilized to process data sets has to be efficient to create the most utility for the end-user so that time is not wasted in waiting for results to be presented.  Further, computing resources with inefficient code could be in danger of being over-leveraged, creating stability issues in the compute environment.  This project looks at two versions of VBA code, an original version and a refactored version to see if there are any code techniques that produces a more efficient experience.
 ---
 ### Background
 ---
-The original and refactored code versions of this Excel worksheet produce the exact same results, which is a formatted worksheet with analysis results where each of the stock tickers in the data set are evaluated and volumes tabulated and sticker rates of return provided.  In each version, conditional formatting shows positive returns in cells with a green background while negative returns have cell backgrounds in red.
+The original and refactored code versions of this Excel worksheet produce the exact same results, which is a formatted worksheet with analysis of 12 different stock tickers.  Each of the stock tickers in the data set are evaluated and volumes tabulated and rates of return provided for each ticker symbol.  In each version, the user is prompted to select with data set to process, 2017 data or 2018 data.  Conditional formatting shows positive returns in cells with a green background while negative returns have cell backgrounds in red.
 ---
 ### Technology Involved
 ---
+The technology involved if VBA code, the macro language for Microsoft Office.  In this workbook, there are no non-programmatic activities.  All processing and programmatic execution is occurring within VBA modules that are accessed thorugh the Developer ribbon within the application.
+---
 #### Original Code
 ---
-The original VBA code relies user input to identify the data set (e.g. which year, 2017 or 2018) is appropriate to process.  Nested For loops and considtional compound If Then and Else statements are utilized to establish the ticker symbol and if the ticker symbol is the same, in an additive manner update a variable as it progresses through the data set and then when it is determined that the stock ticker changes, the values of the variables and calculations to determine return, starting and ending prices are writen to the analysis worksheet and then processing progresses to the next ticker.  This process continues through the entire data set pausing each time to write summary data to the Excel worksheet after reading the last line item associated with the current stock ticker. 
+The original VBA code relies on nested For Loops and conditional compound If Then and Else statements.  The outer loop cycles through a single array of 12 ticker symbols.  ?The conditional statements are utilized to establish a comparison between the ticker symbol in the data set and the current ticker in the variable array.  If the ticker symbol is the same, in an additive manner an update to variables occur as the program loops through from the inner loop each line of data in the data worksheet.  As it progresses through the data set a conditional statement determines whether the stock ticker changes.  If so, the values of the variables and calculations that determine return, starting and ending prices are writen to the analysis worksheet, and then processing returns to the code to progresses to the next ticker.  This process continues through the entire data set pausing each time to write summary data to the Excel worksheet after reading the last line item associated with the current stock ticker. Following is a screen shot of the key code snippets:
+---
+
 ---
 #### Refactored Code
 ---
