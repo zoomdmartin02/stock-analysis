@@ -10,7 +10,7 @@ In working with data sets, size matters.  Code utilized to process data sets has
 ---
 ### Background
 ---
-The original and refactored code versions of this Excel worksheet produce the exact same results, which is a formatted worksheet with analysis of 12 different stock tickers.  Each of the stock tickers in the data set are evaluated and volumes tabulated and rates of return provided for each ticker symbol.  In each version, the user is prompted to select with data set to process, 2017 data or 2018 data.  Conditional formatting shows positive returns in cells with a green background while negative returns have cell backgrounds in red.
+The original and refactored code versions of this Excel worksheet produce the exact same results, which is a formatted worksheet with analysis of 12 different stock tickers.  Each of the stock tickers in the data set are evaluated and volumes tabulated and rates of return provided for each ticker symbol.  In each version, the user is prompted to select which data set to process, 2017 data or 2018 data.  Conditional formatting shows positive returns in cells with a green background while negative returns have cell backgrounds in red.
 ---
 ### Technology Involved
 ---
