@@ -1,7 +1,5 @@
 # Stock-analysis Excel Application and Code Refactoring Analysis
----✓There is a detailed summary of the pros and cons of refactoring code. ✓There is a detailed summary of the pros and cons of the original and refactored VBA script.
-
-
+---
 ## Project Overview
 ---
 This project takes two versions of an Excel Stock Analysis workbook and compares the VBA code to determine which is most efficient.
@@ -57,5 +55,10 @@ Here are the screenshots that show the amount of time it took to run each of the
 ---
 2018 ![Figure-7](Resources/VBA_Challenge_2018.png)
 ---
-
+With the refactored code, we seem to have brought our processing time down significantly from nearly 12.5 seconds to now about half a second.  I had heard that processing in memory is always faster than writing to the hard drive, but this is a very solid proof case.
+---
 ## Summary
+---
+I can only think of one reason why a developer would not be interested in learning ways to improve his/her code.  Refactoring simply looks at possible improvements.  In our case above, we have shown that signifcant improvement to the user experience and resoure utilization can be achieved by refactoring code instead of always going back to original development efforts.
+---
+The original vs refactored code in this case showed significant improvement by just minimizing writes to the worksheet at the end and leveraging variable indexes, allowing all processing to stay in memory as opposed to writing each time it cycled through the outer loop.  Any client or customer would very likely greatly prefer the refactored over the original code, especially as data sets being processed increase.
